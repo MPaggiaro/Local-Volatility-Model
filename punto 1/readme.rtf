@@ -1,0 +1,16 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Allora, ho caricato tutti i files da runnare. In pratica, ho solo risistemato alcune cose del codice di Eliseo che erano soprattutto \'93stilistiche\'94 e alcune variabili che venivano passate inutilmente.\
+\
+calibrator_mod \'e8 esattamente uguale a calibrator tranne per il fatto che chiama model_volatility_mod invece di model_volatility.\
+\
+Per il resto le modifiche sono praticamente quelle di cui avevamo gi\'e0 parlato.\
+\
+I risultati vengono praticamente uguali, non combaciano esattamente perch\'e9 si usa una griglia leggermente diversa. Invece il tempo che ci mette cambia tantissimo, tipo da 17 secondi a 3.\
+\
+L\'92unica modifica che potremmo fare ancora \'e8 rendere un po\'92 pi\'f9 ben distribuita la discretizzazione temporale: in pratica qui si sceglie N nello script iniziale e poi, indipendentemente dalla distanza delle expires, si suddivide l\'92intervallo [T(i-1),T(i)] in N sottointervalli. Cio\'e8 in pratica il passo di discretizzazione temporale non \'e8 uniforme, ma varia ogni volta che passiamo dall\'92intervallo di tempo [T(i-1),T(i)] a [T(i),T(i+1)]. Per cui si potrebbe fare che N \'e8 il numero totale di intervallini della griglia e viene ripartito proporzionalmente (spero di essermi spiegato ahahah). Per\'f2 sinceramente me ne sbatterei alla grande\'85}
